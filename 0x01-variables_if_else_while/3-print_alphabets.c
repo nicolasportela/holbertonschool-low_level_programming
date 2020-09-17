@@ -19,6 +19,7 @@ putchar(a[n]);
 for (n = 0; n < 26; n++)
 {
 putchar(A[n]);
+}
 {
 putchar('\n');
 }
