@@ -9,6 +9,7 @@
 int main(void)
 {
 unsigned int n;
+n < 10
 
 for (n = 0; n < 10; n++)
 {
