@@ -8,12 +8,12 @@
 
 int main(void)
 {
-char a;
-a[25] = {"a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"};
+int n;
+char a[26] = {"abcdefghijklmnopqrstuvwxyz"};
 
-for (a = 0; ; a++)
+for (n = 0; n < 26; n++)
 {
-putchar(a);
+putchar(a[n]);
 }
 return (0);
 }
