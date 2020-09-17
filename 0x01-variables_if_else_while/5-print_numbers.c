@@ -9,9 +9,9 @@
 int main(void)
 {
 int n;
-char a[9] = {"123456789"};
+char a[10] = {"0123456789"};
 
-for (n = 0; n < 9; n++)
+for (n = 0; n < 10; n++)
 {
 putchar(a[n]);
 }
