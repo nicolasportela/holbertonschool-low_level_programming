@@ -9,12 +9,16 @@
 int main(void)
 {
 int n;
-char a[42] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+char a[26] = {"abcdefghijklmnopqrstuvwxyz"};
+char A[26] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 
-for (n = 0; n < 42; n++)
+for (n = 0; n < 26; n++)
 {
 putchar(a[n]);
 }
+for (n = 0; n < 26; n++)
+{
+putchar(A[n]);
 {
 putchar('\n');
 }
