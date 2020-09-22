@@ -1,0 +1,12 @@
+#include "holberton.h"
+
+/**
+ * _abs - check the code for Holberton School students.
+ * @x: name of the variable
+ * Return: void.
+ */
+
+int _abs(int x)
+{
+	return (x);
+}
