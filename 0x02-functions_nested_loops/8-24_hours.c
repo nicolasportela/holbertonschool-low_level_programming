@@ -8,10 +8,13 @@
 
 void jack_bauer(void)
 {
-	int x;
+	int x, a;
 
-	for (x = 0; x <= 4; x++)
+	for (x = 0; x <= 9; x++)
 	{
-		putchar((n / 10) + '0');
-		putchar((n % 10) + '0');
+		if (x <= 2)
+		{
+			putchar((x / 10) + '0');
+			putchar((x % 10) + '0');
+		}
 }
