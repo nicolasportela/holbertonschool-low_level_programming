@@ -8,15 +8,21 @@
 
 void print_square(int size)
 {
-	int a;
+	int a, b;
 
-	for (a = 48; a <= 57; a++)
+	if (size <= 0)
 	{
-		if (a != 50 && a != 52)
+		_putchar('\n');
+	}
+	else
+	{
+		for (a = 1; a <= size; a++)
 		{
-			_putchar(a);
+			for (b = 1; b <= size; b++)
+			{
+				_putchar('#');
+			}
+        	_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
-2020 GitHub, Inc.
