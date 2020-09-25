@@ -10,7 +10,7 @@ void print_triangle(int size)
 {
 	int a, b, c, espacio, pound;
 
-	espacio = size -1;
+	espacio = size - 1;
 	pound = 1;
 
 	if (size > 0)
