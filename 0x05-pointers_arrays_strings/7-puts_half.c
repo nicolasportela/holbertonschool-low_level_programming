@@ -14,15 +14,15 @@ void puts_half(char *str)
 	{
 		b = a / 2;
 	}
-	for (c = b + 1; str[c] != '\0'; c++)
+	for (c = b; str[c] != '\0'; c++)
 	{
-		if (a % 2 != 0)
+		if ((a % 2) != 0)
 		{
 			_putchar(str[c - 1]);
 		}
 		else
 		{
-			_putchar(str[c]);
+			_putchar(str[c + 1]);
 		}
 	}
 	_putchar('\n');
