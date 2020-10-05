@@ -10,7 +10,6 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *null = "NULL";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -19,5 +18,5 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		}
 	}
-	return (null);
+	return (0);
 }
