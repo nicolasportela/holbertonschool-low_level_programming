@@ -1,13 +1,22 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * set_string - check the code for Holberton School students.
- * @s: variable name
- * @to: variable name
+ * print_diagsums - check the code for Holberton School students.
+ * @a: variable name
+ * @size: variable name
  * Return: void.
  */
 
-void set_string(char **s, char *to)
+void print_diagsums(int *a, int size)
 {
-	to = s;
+	int i, len;
+
+	len = (size * size) - 1;
+
+	for (i = 0; i < len; i++)
+	{
+		sum1 = i + (size + 1);
+	}
+	printf("%d, %d", sum1, sum2);
 }
