@@ -9,15 +9,15 @@
 
 int _prime_check(int n, int i)
 {
-        if (i >= n)
-        {
-                return (1);
-        }
-        if (n % i == 0)
-        {
-                return (0);
-        }
-        return (_prime_check(n, i + 2));
+	if (i >= n)
+	{
+		return (1);
+	}
+	if (n % i == 0)
+	{
+		return (0);
+	}
+	return (_prime_check(n, i + 2));
 }
 
 /**
