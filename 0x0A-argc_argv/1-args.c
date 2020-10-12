@@ -1,11 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- * @argc: variable name
- * @argv: variable name
- * Return: int
+ * main - print the name of a program
+ * @argc: argc
+ * @argv: argv
+ * Return: Always 0.
  */
-
 int main(int argc, char *argv[])
 {
+	(void)*argv;
+	printf("%d\n", argc - 1);
+	return (0);
+}
