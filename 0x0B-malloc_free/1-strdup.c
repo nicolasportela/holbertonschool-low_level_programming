@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	int i; /*index of str*/
 	int ii; /*index of copy of str*/
 
-	if (str == '\0')
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -23,13 +23,13 @@ char *_strdup(char *str)
 	{
 	}
 
-	s = malloc(i * sizeof(char));
+	s = malloc(i * sizeof(char) + 1);
 
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-	for (ii = 0; ii < i; ii++)
+	for (ii = 0; ii <= i; ii++)
 	{
 		s[ii] = str[ii];
 	}
