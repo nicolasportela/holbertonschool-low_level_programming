@@ -3,10 +3,10 @@
 
 /**
  * init_dog - print the name of a program
- * @d:
- * @name:
- * @age:
- * @owner:
+ * @d: member
+ * @name: member
+ * @age: member
+ * @owner: member
  * Return: void
  */
 
