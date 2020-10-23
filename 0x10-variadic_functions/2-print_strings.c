@@ -4,28 +4,38 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - function
+ * print_strings - function
  * @n: variable name
  * @separator: variable name
  * Return: void
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list list;
 	unsigned int i;
+	char *s;
 
-	va_start(list, n);
-	for (i = 0; i < n; i++)
+	if (separator != NULL)
 	{
-		if (separator != NULL)
+		va_start(list, n);
+		for (i = 0; i < n; i++)
 		{
-			printf("%d", va_arg(list, unsigned int));
-			if (i < (n - 1))
+			s = va_arg(list, char *);
+			if (s != NULL)
 			{
-				printf("%s", separator);
+				printf("%s", s);
+				if (i < (n - 1))
+				{
+					printf("%s", separator);
+				}
+			}
+			else
+			{
+				printf("(nil)");
 			}
 		}
+		printf("\n");
+		va_end(list);
 	}
-	printf("\n");
 }
