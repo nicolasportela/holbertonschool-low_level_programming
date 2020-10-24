@@ -16,26 +16,34 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *s;
 
-	if (separator != NULL)
+	if (n == 0)
 	{
-		va_start(list, n);
-		for (i = 0; i < n; i++)
-		{
-			s = va_arg(list, char *);
-			if (s != NULL)
-			{
-				printf("%s", s);
-				if (i < (n - 1))
-				{
-					printf("%s", separator);
-				}
-			}
-			else
-			{
-				printf("(nil)");
-			}
-		}
 		printf("\n");
-		va_end(list);
+		return;
 	}
+
+	va_start(list, n);
+	for (i = 0; i < (n - 1); i++)
+	{
+		s = va_arg(list, char *);
+		if (s == NULL)
+		{
+			s = "(nil)";
+		}
+		if (separator != NULL)
+		{
+			printf("%s%s", s, separator);
+		}
+		else
+		{
+			printf("%s", s);
+		}
+	}
+	s = va_arg(s, char *);
+	if (s == NULL)
+	{
+		s = "(nil)";
+	}
+	printf("%s\n", s);
+	va_end(list);
 }
