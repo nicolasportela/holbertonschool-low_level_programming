@@ -12,9 +12,9 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list list;
 	unsigned int i;
-	char *s;
+	va_list hchar;
+	char *test;
 
 	if (n == 0)
 	{
@@ -22,28 +22,28 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		return;
 	}
 
-	va_start(list, n);
+	va_start(hchar, n);
 	for (i = 0; i < (n - 1); i++)
 	{
-		s = va_arg(list, char *);
-		if (s == NULL)
+		test = va_arg(hchar, char *);
+		if (test == NULL)
 		{
-			s = "(nil)";
+			test = "(nil)";
 		}
 		if (separator != NULL)
 		{
-			printf("%s%s", s, separator);
+			printf("%s%s", test, separator);
 		}
 		else
 		{
-			printf("%s", s);
+			printf("%s", test);
 		}
 	}
-	s = va_arg(s, char *);
-	if (s == NULL)
+	test = va_arg(hchar, char *);
+	if (test == NULL)
 	{
-		s = "(nil)";
+		test = "(nil)";
 	}
-	printf("%s\n", s);
-	va_end(list);
+	printf("%s\n", test);
+	va_end(hchar);
 }
