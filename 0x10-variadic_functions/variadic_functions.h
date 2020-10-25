@@ -8,14 +8,14 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 /**
  * struct estructura - Short description
- * @string: First member
- *
+ * @st: pointer
+ * @func: fnction
  * Description: Longer description
  */
 typedef struct estructura
 {
 	char *st;
-	void(*func)();
-}reestructura;
+	void (*func)();
+} reestructura;
 void print_all(const char * const format, ...);
 #endif
