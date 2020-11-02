@@ -2,10 +2,11 @@
 
 /**
  * add_node_end - adds a new node at the beginning of a list.
- * @head: head
- * @str: str
- * Return: Always 0.
+ * @head: variable
+ * @str: variable
+ * Return: The adress of the new element
  */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
 	int i;

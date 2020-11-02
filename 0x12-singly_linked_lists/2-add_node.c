@@ -6,6 +6,7 @@
  * @str: variable
  * Return: adress of new element
  */
+
 list_t *add_node(list_t **head, const char *str)
 {
 	int i;
