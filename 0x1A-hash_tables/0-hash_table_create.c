@@ -8,12 +8,30 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t* table = malloc(sizeof(hash_table_t));
+        hash_table_t *table;
+	unsigned long int i = 0;
 
-	table->size = size;
-	table->count = 0;
-	table->items = (Ht_item**) calloc (table->size, sizeof(Ht_item*));
-	for (int i=0; i<table->size; i++)
-		table->items[i] = NULL;
-	return table;
+	if (size == 0)
+		return (NULL);
+
+	table = malloc(sizeof(hash_table_t));
+	if (table == NULL)
+		return (NULL);
+
+	(table)->size = size;
+
+	(table)->array = malloc(8 * size);
+	if ((table)->array == NULL)
+	{
+		free(table);
+		return (NULL);
+	}
+
+	while (i < size)
+	{
+		(table)->array[i] = NULL;
+		i++;
+	}
+
+	return (table);
 }
