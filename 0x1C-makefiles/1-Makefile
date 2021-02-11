@@ -3,5 +3,3 @@ SRC=main.c holberton.c
 
 holberton: $(SRC)
 	$(CC) $(SRC) -o holberton
-
-.PHONY: holberton clean
